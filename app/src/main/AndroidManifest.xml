@@ -38,11 +38,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--
         <activity
             android:name=".MapsActivity"
             android:label="Map">
 
         </activity>
+        -->
+        <activity android:name=".MapsActivity" android:parentActivityName=".MainMenu">
+
+            </activity>
+
 
     </application>
 
