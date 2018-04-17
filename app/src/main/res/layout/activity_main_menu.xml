@@ -24,15 +24,15 @@
         tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_editor_absoluteY="113dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/SessionBtn" />
 
     <Button
         android:id="@+id/SessionBtn"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="184dp"
+        android:layout_width="0dp"
         android:layout_height="127dp"
         android:layout_marginEnd="19dp"
-        android:layout_marginStart="29dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="113dp"
         android:background="@android:color/holo_red_light"
         android:drawableRight="@mipmap/ic_launcher"
