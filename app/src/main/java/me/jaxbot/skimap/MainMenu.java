@@ -9,15 +9,21 @@ import android.view.View;
 import android.content.Intent;
 
 public class MainMenu extends AppCompatActivity {
-
+    mountainManager m = new mountainManager();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+        System.out.println("Hello World!");
+        //m.getRegion();
     }
-    public void buttonOnClick(View v){
-        Intent intent = new Intent(this, MapsActivity.class);
+    public void buttonOnClick(View v) {
+        Intent intent = new Intent(this, State.class);
         startActivity(intent);
+        new mountainManager().execute();
+
     }
+
+
 
 }
