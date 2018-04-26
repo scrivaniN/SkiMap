@@ -43,12 +43,12 @@
         </activity>
 
         <activity
-            android:name=".State" android:parentActivityName=".MainMenu"
+            android:name=".stateView" android:parentActivityName=".MainMenu"
             android:label="Select a State">
 
         </activity>
 
-        <activity android:name=".MapsActivity" android:parentActivityName=".MainMenu" >
+        <activity android:name=".MapsActivity" android:parentActivityName=".stateView" >
 
             </activity>
 

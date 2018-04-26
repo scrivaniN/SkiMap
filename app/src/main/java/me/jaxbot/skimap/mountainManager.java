@@ -21,6 +21,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
 import java.util.Objects;
+import java.util.Scanner;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -34,13 +35,13 @@ import javax.xml.parsers.ParserConfigurationException;
 
 
 
- public class mountainManager extends AsyncTask<Object, String, Integer> {
-//    String placeName;
-//    String longitude;
-//    String state;
-//    String stateAbbr;
-//    String latitude;
-//    int id;
+ public class mountainManager{ //extends AsyncTask<Object, String, Integer> {
+    String placeName;
+    String longitude;
+    String state;
+    String stateAbbr;
+    String latitude;
+    int id;
 
 
 
@@ -48,58 +49,24 @@ import javax.xml.parsers.ParserConfigurationException;
 
     }
 
-    @Override
-    protected Integer doInBackground(Object[] objects) {
-        try {
-            URL url = new URL("https://skimap.org/Regions/view/282.xml");
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc = db.parse(new InputSource(url.openStream()));
-            doc.getDocumentElement().normalize();
-
-
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return null; // not going to return anything
-    }
-
-    protected void onPostExecute(){
-        //do something with the url and xml parse.
-    }
-
-
-
-    public void getRegion(){
-        String url = "https://skimap.org/Regions/view/282.xml";
-        System.out.println(url);
-        try{
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc = db.parse(new URL(url).openStream());
-            doc.getDocumentElement().normalize();
-
-            NodeList nodeList = doc.getElementsByTagName("region");
-
-            for(int i =0; i < nodeList.getLength(); i++){
-                Node node =nodeList.item(i);
+    // returns xml but i need to retrun an object to populate map
+    public void getRegion() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    // Your implementation goes here
+                    String out = new Scanner(new URL("https://skimap.org/Regions/view/282.xml").openStream(), "UTF-8").useDelimiter("\\A").next();
+                    System.out.println(out);
+                    // for loop to get ski areas.
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
-
-            System.out.println("we have opened the url");
-
-//            NodeList errNodes = doc.getElementsByTagName("region");
-//            if(errNodes.getLength() > 0){
-//                Element err = (Element)errNodes.item(0);
-//                System.out.println("name: " + err.getElementsByTagName("name").item(0).getTextContent());
-//            }
-
-        }catch(Exception e){
-            e.printStackTrace();
-        }
+        }).start();
     }
+
+
 
 
 }
