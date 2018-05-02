@@ -6,17 +6,22 @@ import android.view.View;
 import android.content.Intent;
 
 public class MainMenu extends AppCompatActivity {
-    mountainManager m = new mountainManager();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         System.out.println("Hello World!");
+        mountainManager m = new mountainManager();
+        for(int id :MountainModel.mountainIDs)
+            m.getRegion(id);
+
     }
     public void buttonOnClick(View v) {
-        Intent intent = new Intent(this, stateView.class);
+
+        Intent intent = new Intent(this, StateView.class);
         startActivity(intent);
-        m.getRegion();
 
     }
 
