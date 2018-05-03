@@ -22,7 +22,7 @@ public class MountainModel {
     static{
         h.put(282, "Connecticut");
         h.put(294, "Maine");
-        h.put(296, "Massachusettes");
+        h.put(296, "Massachusetts");
         h.put(304, "New Hampshire");
         h.put(314, "Rhode Island");
         h.put(320, "Vermont");

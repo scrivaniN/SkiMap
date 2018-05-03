@@ -47,7 +47,8 @@
             android:label="Select a State">
 
         </activity>
-        <activity android:name=".MountainInfo" android:parentActivityName=".StateView">
+        <activity android:name=".MountainInfo" android:parentActivityName=".StateView"
+            android:label="Ski Areas ">
 
         </activity>
 

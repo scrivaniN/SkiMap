@@ -15,7 +15,7 @@ import static me.jaxbot.skimap.MountainModel.mountains;
  */
 
 public class StateView extends AppCompatActivity implements View.OnClickListener {
-    mountainManager m  = new mountainManager();
+    //mountainManager m  = new mountainManager();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,55 +44,61 @@ public class StateView extends AppCompatActivity implements View.OnClickListener
       switch(view.getId()){
 
           case R.id.connBtn:
-//              Intent i = new Intent(this, MountainInfo.class);
-//              i.putExtra("location",view.getId());
-              //locationID = 282;
+              for(MountainModel m : mountains){
+                  if(m.state == "Connecticut"){
+                      String sl = m.name;
+                      intent.putExtra("value", sl);
+                  }
+              }
 
 
 
               break;
           case R.id.maineBtn:
-              //System.out.println("Maine button pressed");
-
-
-//              //intent.putExtra("location",294);
-             // for(MountainModel m : mountains){
-                  // display information on screen
-                  //System.out.println(m.ID);
-                   // if (m.state == "Maine") {
-//                        TextView mytext = (TextView) findViewById(R.id.TxtView1);
-//                        // Button myButton = (Button) findViewById(R.id.TxtView1);
-//                        mytext.append(m.ID);
-//                        mytext.append("\n");
-//                        mytext.append(m.name);
-//                        mytext.append("\n");
-//                        // myButton.setText(m.name);
- //                       System.out.println(m.ID);
-                       // System.out.println(m.name);
-
-
-              //      }
-              //}
-               // break;
+              for(MountainModel m : mountains){
+                  if (m.state == "Maine") {
+                        String sl = m.name;
+                        intent.putExtra("value", sl);
+                    }
+              }
+              break;
           case R.id.massBtn:
               System.out.println("Mass button pressed");
-              //intent.putExtra("location",296);
-              locationID = 296;
+              for(MountainModel m : mountains){
+                  if(m.state == "Massachusetts"){
+                      String sl = m.name;
+                      intent.putExtra("value", sl);
+                  }
+              }
+
               break;
           case R.id.NHBtn:
               System.out.println("NH button pressed");
-              //intent.putExtra("location",304);
-              locationID = 304;
+              for(MountainModel m : mountains){
+                  if(m.state == "New Hampshire"){
+                      String sl = m.name;
+                      intent.putExtra("value", sl);
+                  }
+              }
+
               break;
           case R.id.rhodeBtn:
               System.out.println("rhode button pressed");
-              //intent.putExtra("location",314);
-              locationID = 314;
+              for(MountainModel m : mountains){
+                  if(m.state == "Rhode Island"){
+                      String sl = m.name;
+                      intent.putExtra("value", sl);
+                  }
+              }
               break;
           case R.id.vermontBtn:
               System.out.println("vermont button pressed");
-              //intent.putExtra("location",320);
-              locationID = 320;
+              for(MountainModel m : mountains){
+                  if(m.state == "Vermont"){
+                      String sl = m.name;
+                      intent.putExtra("value", sl);
+                  }
+              }
       }
         //m.getRegion(locationID);
         startActivity(intent);

@@ -14,8 +14,10 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
         System.out.println("Hello World!");
         mountainManager m = new mountainManager();
+        SkiManager sm = new SkiManager();
         for(int id :MountainModel.mountainIDs)
             m.getRegion(id);
+        sm.getSkiIds();
 
     }
     public void buttonOnClick(View v) {

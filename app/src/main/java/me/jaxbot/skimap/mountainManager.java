@@ -32,16 +32,7 @@ import static me.jaxbot.skimap.MountainModel.h;
 
 
  public class mountainManager extends AppCompatActivity{
-    String name;
 
-
-
-    //Intent intent = getIntent();
-    //int mountainID = intent.getIntExtra("connBtn", 1);
-
-
-    public mountainManager(){
-    }
 
      //returns xml but i need to retrun an object to populate map
     // each url has a different id use a hashmap to specific ids all buttons work the same but return what state i am in.
