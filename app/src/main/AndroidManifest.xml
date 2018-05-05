@@ -8,9 +8,8 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -32,27 +31,33 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".MainMenu">
-
+        <activity android:name=".MainMenu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".StateView" android:parentActivityName=".MainMenu"
-            android:label="Select a State">
+            android:name=".StateView"
+            android:label="Select a State"
+            android:parentActivityName=".MainMenu" />
+        <activity
+            android:name=".MountainInfo"
+            android:label="Ski Areas "
+            android:parentActivityName=".StateView" />
+        <activity
+            android:name=".PersonalNoteView"
+            android:label="Write a Note"
+            android:parentActivityName=".StateView">
 
         </activity>
-        <activity android:name=".MountainInfo" android:parentActivityName=".StateView"
-            android:label="Ski Areas ">
+        <activity
+            android:name=".PastNotes"
+            android:label="Past Notes"
+            android:parentActivityName=".MainMenu">
 
         </activity>
-
-
     </application>
 
 </manifest>

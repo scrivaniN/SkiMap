@@ -2,4 +2,6 @@
     <string name="app_name">Slush</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_main_menu">MainMenu</string>
+    <string name="title_activity_ski_area_info">SkiAreaInfo</string>
+    <string name="title_activity_past_review">PastReview</string>
 </resources>

@@ -2,10 +2,14 @@ package me.jaxbot.skimap;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
+import java.io.Serializable;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 import static me.jaxbot.skimap.MountainModel.mountains;
 
@@ -14,9 +18,8 @@ import static me.jaxbot.skimap.MountainModel.mountains;
  * Created by nickscrivani on 4/18/18.
  */
 
-public class StateView extends AppCompatActivity implements View.OnClickListener {
-    //mountainManager m  = new mountainManager();
-
+public class StateView extends AppCompatActivity implements View.OnClickListener{
+        MountainModel m;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,75 +38,76 @@ public class StateView extends AppCompatActivity implements View.OnClickListener
         Button six = (Button) findViewById(R.id.vermontBtn);
         six.setOnClickListener(this);
 
+
     }
 
+    /**
+     *
+     * @param view
+     * This method grabs all mountains in the specific state based off buttonClick,
+     * and send it to the next activity.
+     */
     @Override
     public void onClick(View view) {
         Intent intent = new Intent(this, MountainInfo.class);
-        int locationID = 0;
+        ArrayList<String> names = new ArrayList<>();
       switch(view.getId()){
 
           case R.id.connBtn:
               for(MountainModel m : mountains){
                   if(m.state == "Connecticut"){
-                      String sl = m.name;
-                      intent.putExtra("value", sl);
+                      names.add(m.name);
                   }
               }
-
-
-
+              intent.putStringArrayListExtra("value", names);
               break;
           case R.id.maineBtn:
               for(MountainModel m : mountains){
                   if (m.state == "Maine") {
-                        String sl = m.name;
-                        intent.putExtra("value", sl);
+                      names.add(m.name);
                     }
               }
+              intent.putStringArrayListExtra("value", names);
               break;
           case R.id.massBtn:
               System.out.println("Mass button pressed");
               for(MountainModel m : mountains){
                   if(m.state == "Massachusetts"){
-                      String sl = m.name;
-                      intent.putExtra("value", sl);
+                      names.add(m.name);
                   }
               }
-
+              intent.putStringArrayListExtra("value", names);
               break;
           case R.id.NHBtn:
               System.out.println("NH button pressed");
               for(MountainModel m : mountains){
                   if(m.state == "New Hampshire"){
-                      String sl = m.name;
-                      intent.putExtra("value", sl);
+                      names.add(m.name);
                   }
               }
-
+              intent.putStringArrayListExtra("value", names);
               break;
           case R.id.rhodeBtn:
               System.out.println("rhode button pressed");
               for(MountainModel m : mountains){
                   if(m.state == "Rhode Island"){
-                      String sl = m.name;
-                      intent.putExtra("value", sl);
+                      names.add(m.name);
                   }
               }
+              intent.putStringArrayListExtra("value", names);
               break;
           case R.id.vermontBtn:
               System.out.println("vermont button pressed");
               for(MountainModel m : mountains){
                   if(m.state == "Vermont"){
-                      String sl = m.name;
-                      intent.putExtra("value", sl);
+                      names.add(m.name);
                   }
               }
-      }
-        //m.getRegion(locationID);
-        startActivity(intent);
-        //m.getRegion(locationID);
+              intent.putStringArrayListExtra("value", names);
 
+
+      }
+        startActivity(intent);
     }
 }
 
