@@ -31,13 +31,16 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".MainMenu">
+        <activity android:name=".LogIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainMenu"
+            android:label="Slush" />
         <activity
             android:name=".StateView"
             android:label="Select a State"
@@ -49,14 +52,15 @@
         <activity
             android:name=".PersonalNoteView"
             android:label="Write a Note"
-            android:parentActivityName=".StateView">
-
-        </activity>
+            android:parentActivityName=".StateView" />
         <activity
             android:name=".PastNotes"
             android:label="Past Notes"
-            android:parentActivityName=".MainMenu">
-
+            android:parentActivityName=".MainMenu" />
+        <activity
+            android:name=".Register"
+            android:label="Sign Up"
+            android:parentActivityName=".LogIn">
         </activity>
     </application>
 

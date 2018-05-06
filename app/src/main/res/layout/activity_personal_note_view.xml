@@ -23,11 +23,12 @@
         app:layout_constraintBottom_toBottomOf="@+id/postReviewBtn"
         android:layout_marginEnd="76dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="86dp"
+        android:layout_marginTop="84dp"
         tools:layout_constraintLeft_creator="1"
         android:layout_marginBottom="82dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/dateEditText" />
+        app:layout_constraintTop_toTopOf="@+id/dateEditText"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/postReviewBtn"
@@ -39,7 +40,8 @@
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="47dp" />
+        android:layout_marginBottom="48dp"
+        android:layout_marginRight="44dp" />
 
     <TextView
         android:id="@+id/TextView"
@@ -51,7 +53,7 @@
         android:textStyle="bold"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        android:layout_marginEnd="21dp"
+        android:layout_marginEnd="22dp"
         app:layout_constraintRight_toRightOf="@+id/nameEditText"
         android:layout_marginTop="31dp"
         tools:layout_constraintLeft_creator="1"
@@ -83,8 +85,9 @@
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
         app:layout_constraintRight_toRightOf="@+id/nameEditText"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="42dp"
         app:layout_constraintTop_toBottomOf="@+id/nameEditText"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="@+id/nameEditText" />
+
 </android.support.constraint.ConstraintLayout>

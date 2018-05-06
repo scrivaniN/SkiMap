@@ -13,8 +13,8 @@ import android.widget.Button;
  */
 
 public class MainMenu extends Activity implements View.OnClickListener {
-    mountainManager m = new mountainManager();
-    boolean alreadyExecuted = false;
+    //mountainManager m = new mountainManager();
+    //boolean alreadyExecuted = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +25,10 @@ public class MainMenu extends Activity implements View.OnClickListener {
         Button two = (Button)findViewById(R.id.mtnReviewBtn);
         two.setOnClickListener(this);
         System.out.println("Hello World!");
-        if(alreadyExecuted != true) {
-            m.getRegion();
-            alreadyExecuted = true;
-        }
+//        if(alreadyExecuted != true) {
+//            m.getRegion();
+//            alreadyExecuted = true;
+//        }
 
     }
 

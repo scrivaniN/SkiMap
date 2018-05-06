@@ -6,29 +6,17 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-
 import static me.jaxbot.skimap.MountainModel.h;
-import static me.jaxbot.skimap.MountainModel.mountains;
-
 
 /**
  * Created by nickscrivani on 4/12/18.
  * this is a model
  */
 
-
-
- public class mountainManager{
-
-
+public class mountainManager{
     /**
      *
      * Parses Xml based off which MountainID. Then adds it to my arrayList to create mountain objects.
@@ -74,9 +62,6 @@ import static me.jaxbot.skimap.MountainModel.mountains;
 
             }).start();
     }
-
-
-
     /*
      * https://stackoverflow.com/questions/8489151/how-to-parse-xml-for-cdata
      * grabs the child node from the XML and returns the plain text in between tag.

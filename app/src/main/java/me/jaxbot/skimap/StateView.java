@@ -19,7 +19,7 @@ import static me.jaxbot.skimap.MountainModel.mountains;
  */
 
 public class StateView extends AppCompatActivity implements View.OnClickListener{
-        MountainModel m;
+        //MountainModel m;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
